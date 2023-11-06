@@ -18,12 +18,9 @@ body {
     border: 2px solid red;
 }
 .di{
-    position: relative;
-    background-color: w;
-    
+    background-color: ;
     border: 1px solid blue;
 }
 .di:hover {
-    color: black;
-   ;
+    background-color: black;
 }
