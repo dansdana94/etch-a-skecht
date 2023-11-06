@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 15px;
+}
+#divs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    height: 400px;
+    width: 400px;
+    border: 2px solid red;
+}
+.di{
+    position: relative;
+    background-color: w;
+    
+    border: 1px solid blue;
+}
+.di:hover {
+    color: black;
+   ;
+}
