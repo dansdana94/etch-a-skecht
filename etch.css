@@ -18,9 +18,15 @@ body {
     border: 2px solid red;
 }
 .di{
-    background-color: ;
-    border: 1px solid blue;
+    
+
 }
 .di:hover {
-    background-color: black;
+    
+}
+#name {
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(45, 45, 73);
+    font: lora;
 }

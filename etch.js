@@ -8,6 +8,13 @@ let rainbowBtn = document.querySelector('#rainbowBtn')
 let darkBtn = document.querySelector('#darkBtn');
 let errorMsg = document.getElementById('errorMsg');
 
+
+function randColors(){
+    let randcolor = Math.floor(Math.random()*7);
+    return(colors[randcolor])
+}
+randColors()
+
 let div = document.createElement('div');
 div.classList.add('di')
 
@@ -17,8 +24,20 @@ function gridSize(n) {
             for(let j = 0; j < n; j++){
                 let clonediv= div.cloneNode(true);
                 divs.appendChild(clonediv)
+                div.style.backgroundColor='black'
                 clonediv.style.cssText=(`width: calc(100%/${n});
-                height: calc(100%/${n})`)
+                height: calc(100%/${n})`);
+
+                darkBtn.addEventListener('click',()=>{
+                    clonediv.addEventListener('mousemove',(s)=>{
+                        clonediv.style.backgroundColor="black";
+                    })
+                })
+                rainbowBtn.addEventListener('click',()=>{
+                    clonediv.addEventListener('mousemove',(s)=>{
+                        clonediv.style.backgroundColor=`${randColors()}`;
+                    })
+                })
             }
         }
     }
@@ -29,8 +48,8 @@ function gridSize(n) {
 
 
 usBtn.addEventListener('click', (value) => {
-        value=usInput.value;
-        gridSize(value)
+        value=usInput.value; gridSize(value);
         usBtn.innerText=('Reset Page')
         usBtn.addEventListener('click',()=>{location.reload()})
+       
 })
